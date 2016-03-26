@@ -1,0 +1,14 @@
+commit b3e3caf127ec44b5059fccd0565c4bef14034fa5
+Date:   Fri Mar 25 15:44:00 2016 +0200
+
+    updated README.rst
+
+commit 4b90c143f8b1e65abe3133e3db7c2002613e2f15
+Date:   Fri Mar 25 04:08:13 2016 +0200
+
+    Updated README.rst
+
+commit 72a40148a2e708fc93712de8de41b1fd1f67241f
+Date:   Fri Mar 25 04:07:33 2016 +0200
+
+    Proof of concept first commit

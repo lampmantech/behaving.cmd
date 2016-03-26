@@ -5,7 +5,7 @@ version = '0.0.1-dev0'
 setup(name='behaving_cmd',
       version=version,
       description="Behavior-Driven-Development testing for commands and files",
-      long_description=open("README.rst").read() + open("CHANGES.txt").read(),
+      long_description=open("README.rst").read() + open("CHANGELOG.txt").read(),
       classifiers=[
           "Development Status :: 5 - Production/Stable",
           "Intended Audience :: Developers",
@@ -21,5 +21,6 @@ setup(name='behaving_cmd',
       namespace_packages=['behaving'],
       include_package_data=True,
       zip_safe=False,
-      install_requires=['setuptools', 'parse', 'behave', 'sh'],
+      # we plan to make sh and cmd2 soft dependencies
+      install_requires=['setuptools', 'behaving', 'sh'],
       )
