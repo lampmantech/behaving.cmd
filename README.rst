@@ -19,7 +19,23 @@ blessed by the BBDFL (Benevolent Behave Dictator for Life :-) to be
 the way forward for packaging step libraries. Then the `behave`_ community
 can work together without fragmentation and the havoc wrecked by entropy.
 
- 
+
+Step Naming Conventions
+-----------------------
+
+Always encase any pattern subsitutions in doublequotes. It allows us
+to identify the patterns with other tools that read feature files.
+
+Make the step names long enough that they will be resolvable even
+when used as a part of a large ecosystem of behaving packages.
+
+Use "following" as the last word of a step to signal that a table
+will be following.
+
+Embed the heading like |name|value| in the step to make sure the
+person using the step knows what is expected.
+
+
 Contributing to behaving
 ------------------------
 Please see the `Contribution Guidelines`_

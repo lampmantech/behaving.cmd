@@ -1,3 +1,8 @@
+commit fd8be0e739f80bdbf5cc6f2f871cf28a8d53ae2e
+Date:   Sat Mar 26 16:25:35 2016 +0200
+
+    Fixed setup.py to depend on behaving
+
 commit b3e3caf127ec44b5059fccd0565c4bef14034fa5
 Date:   Fri Mar 25 15:44:00 2016 +0200
 
