@@ -63,6 +63,10 @@ def vAssert_the_directory_contains_glob(context, uDir, uGlob):
 
 # FixMe: filenames in a table and the inverses of the above
 
+@step(u'Ensure the symlinks from the directory "{uDir}" exist with the |from|to| following')
+def vEnsure_the_symlinks_in_the_directory(context, uDir):
+    pass
+
 @step(u'Write to the file "{uFile}" the lines following')
 def vWrite_to_the_file_the_lines(context, uFile):
     pass
@@ -85,5 +89,9 @@ def vAppend_to_the_file_with_environ(context, uFile):
 
 @step(u'Append to the file "{uFile}" with context substitution the lines following')
 def vAppend_to_the_file_with_context(context, uFile):
+    pass
+
+@step(u'Ensure the file "{uFile}" is backed-up with the extension "{uExt}"')
+def vEnsure_the_symlinks_in_the_directory(context, uFile, uExt):
     pass
 

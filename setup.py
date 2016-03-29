@@ -4,7 +4,7 @@ This package is Python 2 only for the moment.
 
 from setuptools import setup, find_packages
 
-version = '0.0.1.dev1'
+version = '0.0.1.dev2'
 
 dParams = dict(name='behaving_cmd',
                version=version,

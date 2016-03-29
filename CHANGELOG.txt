@@ -1,3 +1,8 @@
+commit 859f3177d5e5592bb506a86fb587d909263cc74b
+Date:   Mon Mar 28 16:31:14 2016 +0300
+
+    Fixed setup.py
+
 commit fd8be0e739f80bdbf5cc6f2f871cf28a8d53ae2e
 Date:   Sat Mar 26 16:25:35 2016 +0200
 
