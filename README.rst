@@ -1,10 +1,10 @@
-behaving_cmd
+behaving.cmd
 ============
 
-*behaving_cmd* is a command and file additional feature set for the
+*behaving.cmd* is a command and file additional feature set for the
 `behaving_` testing framework for Behavior-Driven-Development,
 similar to `Cucumber`_ or `lettuce`_. It focuses on command
-and file interactions. *behaving_cmd* is written in Python and is based
+and file interactions. *behaving.cmd* is written in Python and is based
 on `behaving`_, which is based on `behave`_, and uses  `sh`_.
 
 Please refer to *behave*'s excellent `documentation

@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 
 version = '0.0.1.dev2'
 
-dParams = dict(name='behaving_cmd',
+dParams = dict(name='behaving.cmd',
                version=version,
                description="Behavior-Driven-Development testing for commands and files",
                long_description=open("README.rst").read() + open("CHANGELOG.txt").read(),
@@ -29,7 +29,7 @@ dParams = dict(name='behaving_cmd',
                    ],
                keywords="BDD Behavior-Driven-Development testing",
                author='Lampman Tech',
-               url='http://github.com/lampmantech/behaving_cmd',
+               url='http://github.com/lampmantech/behaving.cmd',
                license='GPL',
                packages=find_packages('src', exclude=['tests']),
                package_dir={'': 'src'},
