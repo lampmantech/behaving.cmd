@@ -44,7 +44,22 @@ def bEnsure_the_directory_exists(context, uDir):
 
 @step(u'Assert the file "{uFile}" contains the string "{uStr}"')
 def vAssert_the_file_contains_string(context, uFile, uStr):
-    pass
+    bFileContainsString = bAssert_the_file_contains_string(context, uFile, uStr)
+    assert bFileContainsString, uStr +" not found in " +uFile
+    
+def bAssert_the_file_contains_string(context, uFile, uStr):
+    bFileContainsString = False
+    with codecs.open(uFile, "rt", encoding='utf-8') as oFd:
+        for sLine in oFd:
+            if sLine.find(uStr) >= 0:
+                bFileContainsString = True
+                break
+    return bFileContainsString
+
+@step(u'Assert the file "{uFile}" does not contain the string "{uStr}"')
+def vAssert_the_file_contains_string(context, uFile, uStr):
+    bFileContainsString = bAssert_the_file_contains_string(context, uFile, uStr)
+    assert not bFileContainsString, uStr +" found in " +uFile
 
 @step(u'Assert the file "{uFile}" contains the regexp "{uStr}"')
 @step(u'Assert the file "{uFile}" contains the pyregexp "{uStr}"')
