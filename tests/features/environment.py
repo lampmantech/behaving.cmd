@@ -3,7 +3,6 @@ from behaving.cmd import environment as cenv
 
 
 def before_all(context):
-    import behaving
     cenv.before_all(context)
 
 

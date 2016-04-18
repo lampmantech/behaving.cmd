@@ -10,15 +10,6 @@ from behave import step
 #   Or add it as synonyms.
 #   I don't like the aruba vocabulary.
 
-@step(u'Assert that the directory "{uDir}" exists')
-@step(u'Assert the directory "{uDir}" exists')
-def bAssert_the_directory_exists(context, uDir):
-    uDir = os.path.expandvars(uDir)
-    assert os.path.exists(uDir), "os.path.exists(%r)" % (uDir,)
-    # This follows symbolic links
-    assert os.path.isdir(uDir), "os.path.isdir(%r)" % (uDir,)
-    return True
-
 @step(u'Assert that the file "{uFile}" exists')
 @step(u'Assert the file "{uFile}" exists')
 def bAssert_the_file_exists(context, uFile):
@@ -27,17 +18,6 @@ def bAssert_the_file_exists(context, uFile):
     # This follows symbolic links
     assert os.path.isfile(uFile), "os.path.isfile(%r)" % (uFile,)
     return True
-
-@step(u'Ensure the directory "{uDir}" exists')
-@step(u'Ensure that the directory "{uDir}" exists')
-def bEnsure_the_directory_exists(context, uDir):
-    uDir = os.path.expandvars(uDir)
-    if os.path.isdir(uDir): return True
-    if os.path.exists(uDir):
-        # dead symlink et.al.
-        raise RuntimeError("os.path.exists(%r) but is not a directory" % (uDir,))
-    os.makedirs(uDir)
-    return os.path.isdir(uDir)
 
 
 # These are to help to define our vocabulary, even before coding it.
@@ -82,9 +62,9 @@ def vAssert_the_directory_contains_glob(context, uDir, uGlob):
 def vEnsure_the_symlinks_in_the_directory(context, uDir):
     pass
 
-@step(u'Write to the file "{uFile}" the lines following')
+@step(u'Write to the file "{uFile}" the |value| lines following')
 def vWrite_to_the_file_the_lines(context, uFile):
-    pass
+    bAppend_to_the_file_the_lines(context, uFile, sMode='wt')
 
 @step(u'Write to the file "{uFile}" with environ substitution the lines following')
 def vWrite_to_the_file_with_environ(context, uFile):
@@ -94,9 +74,16 @@ def vWrite_to_the_file_with_environ(context, uFile):
 def vWrite_to_the_file_with_context(context, uFile):
     pass
 
-@step(u'Append to the file "{uFile}" the lines following')
+@step(u'Append to the file "{uFile}" the |value| lines following')
 def vAppend_to_the_file_the_lines(context, uFile):
-    pass
+    bAppend_to_the_file_the_lines(context, uFile, sMode='at')
+    
+def bAppend_to_the_file_the_lines(context, uFile, sMode='at'):
+    bAssert_the_file_exists(context, uFile)
+    with codecs.open(uFile, sMode, encoding='utf-8') as oFd:
+        for row in context.table:
+            oFd.write(row['value'] +'\n')
+    return True
 
 @step(u'Append to the file "{uFile}" with environ substitution the lines following')
 def vAppend_to_the_file_with_environ(context, uFile):

@@ -1,3 +1,13 @@
+commit 0820ef6cb9e29b9cf3fec41a1fc8d8162dd5b423
+Date:   Fri Apr 1 17:36:14 2016 +0300
+
+    Updated README.rst
+
+commit af1ae61770f9276fb1c84de8ed433b50c1651c68
+Date:   Fri Apr 1 15:54:10 2016 +0300
+
+    Renamed the project to behaving.cmd from behaving_cmd
+
 commit c1bd3c4b7d47c619acf992eb9638848d4f68af25
 Date:   Fri Apr 1 15:29:58 2016 +0300
 
