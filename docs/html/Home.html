@@ -1,0 +1,48 @@
+<p>Welcome to the behaving.cmd wiki<br />
+<a href="https://github.com/lampmantech/behaving.cmd/wiki/">https://github.com/lampmantech/behaving.cmd/wiki/</a></p>
+
+<p><strong>behaving.cmd</strong> is a command and file additional feature set for the<br />
+<tt>behaving</tt> testing framework for Behavior-Driven-Development.<br />
+It focuses on command and file interactions. <strong>behaving.cmd</strong> is<br />
+written in Python and is based on <a href="http://pypi.python.org/pypi/behaving">http://pypi.python.org/pypi/behaving</a> .</p>
+
+<p>Tests are contained is textual feature files written in a<br />
+domain specific natural language with a Gherkin syntax, in the files:<br />
+<tt>tests/features/*/*.feature</tt></p>
+
+<p>The steps of the domain language draw on the Python definitions in:<br />
+<tt>src/behaving/cmd/steps/*.py</tt>. These steps then are activated<br />
+in the <tt>*.feature</tt> file by the Python <tt>import</tt> statements in<br />
+<tt>tests/features/steps/__init__.py</tt></p>
+
+<p>It has been structured to use the <tt>behaving</tt> namespace from<br />
+<a href="https://github.com/ggozad/behaving/">https://github.com/ggozad/behaving/</a> and requires that package as a prerequisite.<br />
+This allows us to draw from other <tt>behaving</tt> namespace packages.</p>
+
+<h3>Documentation</h3>
+
+<p>We've written a simple script that can harvest the docstrings to the steps<br />
+for the wiki so that the documentation can be automatically generated;<br />
+see the <a href="Features">Features</a> or <a href="Scripts">Scripts</a> pages, or the <a href="TitleIndex">TitleIndex</a> .</p>
+
+<ul>
+	<li><a href="Installation">Installation</a></li>
+	<li><a href="Testing">Testing</a></li>
+	<li><a href="Features">Features</a></li>
+	<li><a href="Steps">Steps</a></li>
+	<li><a href="StepNamingConventions">StepNamingConventions</a></li>
+	<li><a href="TitleIndex">TitleIndex</a></li>
+</ul>
+<h3>Project</h3>
+
+<p>Use the Wiki to start topics for discussion; it's better to use the<br />
+wiki for knowledge capture, and then we can pull pages back into the<br />
+release documentation in the <tt>wiki</tt> directory. You may need to be<br />
+signed into github.com to edit in the wiki.</p>
+
+<p>Please format wiki pages as Creole. <a href="http://wikicreole.org/">http://wikicreole.org/</a></p>
+
+<p>Please file any bugs in the<br />
+<a href="issues tracker">https://github.com/lampmantech/behaving.cmd/issues</a>.</p>
+
+<hr />
