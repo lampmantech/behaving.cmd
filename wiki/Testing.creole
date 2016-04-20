@@ -1,0 +1,12 @@
+=== Running the Tests ===
+
+Once you have installed the {{{behaving.cmd}}} module, simply change
+to the {{{tests}}} directory and run {{{behave}}}. 
+
+The trivial test is:
+{{{
+  cd tests
+  behave --stop features
+}}}
+
+This is Unix only for now.

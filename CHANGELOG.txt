@@ -1,3 +1,8 @@
+commit aac334a84d977b3a789194b362f30c21c92df6ca
+Date:   Wed Apr 20 05:24:57 2016 +0300
+
+    Bugfix
+
 commit 7f8e7929164d5b97e6c3bb63d0c76b02d1a5db37
 Date:   Mon Apr 18 21:31:08 2016 +0300
 

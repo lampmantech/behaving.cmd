@@ -1,0 +1,50 @@
+Welcome to the behaving.cmd wiki
+https://github.com/lampmantech/behaving.cmd/wiki/
+
+**behaving.cmd** is a command and file additional feature set for the
+{{{behaving}}} testing framework for Behavior-Driven-Development.
+It focuses on command and file interactions. **behaving.cmd** is
+written in Python and is based on http://pypi.python.org/pypi/behaving .
+
+Tests are contained is textual feature files written in a
+domain specific natural language with a Gherkin syntax, in the files:
+{{{tests/features/*/*.feature}}}
+
+The steps of the domain language draw on the Python definitions in:
+{{{src/behaving/cmd/steps/*.py}}}. These steps then are activated
+in the {{{*.feature}}} file by the Python {{{import}}} statements in
+{{{tests/features/steps/__init__.py}}}
+
+
+It has been structured to use the {{{behaving}}} namespace from
+https://github.com/ggozad/behaving/ and requires that package as a prerequisite.
+This allows us to draw from other {{{behaving}}} namespace packages.
+
+=== Documentation ===
+
+We've written a simple script that can harvest the docstrings to the steps
+for the wiki so that the documentation can be automatically generated;
+see the [[Features]] or [[Scripts]] pages, or the [[TitleIndex]] .
+
+
+* [[Installation]]
+* [[Testing]]
+* [[Features]]
+* [[Steps]]
+* [[StepNamingConventions]]
+* [[TitleIndex]]
+
+=== Project ===
+
+Use the Wiki to start topics for discussion; it's better to use the
+wiki for knowledge capture, and then we can pull pages back into the
+release documentation in the {{{wiki}}} directory. You may need to be
+signed into github.com to edit in the wiki.
+
+Please format wiki pages as Creole. http://wikicreole.org/
+
+Please file any bugs in the
+[[issues tracker|https://github.com/lampmantech/behaving.cmd/issues]].
+
+----
+

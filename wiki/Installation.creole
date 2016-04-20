@@ -1,0 +1,13 @@
+
+== Installation ==
+
+=== Installing the Namespace Module ===
+
+The normal usage is to install {{{behaving.cmd}}} as a Python
+package, and installs into the behaving namespace as {{{behaving.cmd}}}.
+
+To install it, run the usual:
+{{{
+  python setup.py install
+}}}
+
