@@ -55,7 +55,7 @@ def vAssert_execute_the_background_command(context, uExe):
     stderr, and stdin to or from files that are the rest of the agument.
     """
     
-    iAssert_execute_the_command_table(context, uExe, bBg=True)
+    iRetval = iAssert_execute_the_command_table(context, uExe, bBg=True)
     # Signals will not raise an ErrorReturnCode. The command will return as if
     # it succeeded, but its exit_code property will be set to -signal_num.
     assert iRetval == 0, "Non-zero exit code for %s: %d" % (
@@ -75,7 +75,7 @@ def vAssert_execute_the_command(context, uExe):
     stderr, and stdin to or from files that are the rest of the agument.
     """
     
-    iAssert_execute_the_command_table(context, uExe, bBg=False)
+    iRetval = iAssert_execute_the_command_table(context, uExe, bBg=False)
     # Signals will not raise an ErrorReturnCode. The command will return as if
     # it succeeded, but its exit_code property will be set to -signal_num.
     assert iRetval == 0, "Non-zero exit code for %s: %d" % (

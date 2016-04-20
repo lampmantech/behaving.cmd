@@ -1,3 +1,8 @@
+commit 7f8e7929164d5b97e6c3bb63d0c76b02d1a5db37
+Date:   Mon Apr 18 21:31:08 2016 +0300
+
+    Renamed src/behaving/tests to tests
+
 commit 0820ef6cb9e29b9cf3fec41a1fc8d8162dd5b423
 Date:   Fri Apr 1 17:36:14 2016 +0300
 
